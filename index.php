@@ -12,9 +12,26 @@ $ProductsList = [
 
 ];
 
-foreach($dbProducts as $product) { ?>
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <?php 
+        foreach($ProductsList as $product) { ?>
+
+        <h2><?= $product->typeProduct ?></h2>
+        <div>Categoria: <?= $product->animal ?></div>
+        <div>Prezzo: <?= number_format($product->price, 2, ',', ' ' )  ?></div>
+
+    <?php    } ?>
     
-
-<?php } ?>
-
+</body>
+</html>

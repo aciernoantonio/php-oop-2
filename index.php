@@ -24,6 +24,12 @@ $ProductsList = [
 </head>
 <body>
 
+    <form action="" method="get">
+
+        <input type="text" >
+
+    </form>
+
     <?php 
         foreach($ProductsList as $product) { ?>
 

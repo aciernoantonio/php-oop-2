@@ -12,8 +12,8 @@ class User {
     }
 
     public function accessUser() {
-        if ($user1->logIn == "true") {
-            set_discount(20);
+        if ($this->logIn == "true") {
+            return $this->discount = 20;
         }
     }
 

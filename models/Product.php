@@ -25,5 +25,9 @@ class Product extends User {
     
 }
 
-$obj = new Product;
-$obj->verifyAge(20);
+$obj = new Product ("cuccia", "cane", 20, true, "antonio", "acierno", "ciao");
+try {
+    echo $obj->verifyAge("ciao");
+} catch(Exception $e) {
+    echo "Eccezione:" . $e->getMessage();
+}

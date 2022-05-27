@@ -1,16 +1,29 @@
 <?php
 
-class Product {
+include __DIR__ . "/Info.php";
+include __DIR__ . "/User.php";
+
+class Product extends User {
+
+    use Info;
 
     public $typeProduct;
     public $animal;
     public $price;
+    public $discount;
 
-    public function __construct($typeProduct, $animal, $price) {
+    public function __construct($typeProduct, $animal, $price, $discount, $name, $surname, $age) {
         $this->typeProduct = $typeProduct;
         $this->animal = $animal;
         $this->price = $price;
+        $this->discount = $discount;
+        $this->name = $name;
+        $this->surname = $surname;
+        $this->age = $age;
 
     }
     
 }
+
+$obj = new Product;
+$obj->verifyAge(20);
